@@ -1,3 +1,8 @@
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-2.2-lightgrey?logo=flask)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+
 # 🧠 Employee Performance Prediction using Machine Learning
 
 A machine learning based web application that predicts the productivity of employees based on various work-related factors like overtime, idle time, department, team structure, and more.

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Productivity Predictor</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .form-container {
+            width: 400px;
+            margin: auto;
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .prediction {
+            margin-top: 20px;
+            font-size: 18px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Employee Productivity Prediction</h2>
+        <form action="/predict" method="POST">
+            <input type="number" step="any" name="team" placeholder="Team No." required>
+            <input type="number" step="any" name="targeted_productivity" placeholder="Targeted Productivity" required>
+            <input type="number" step="any" name="smv" placeholder="SMV" required>
+            <input type="number" step="any" name="wip" placeholder="Work In Progress" required>
+            <input type="number" step="any" name="over_time" placeholder="Over Time (in mins)" required>
+            <input type="number" step="any" name="incentive" placeholder="Incentive" required>
+            <input type="number" step="any" name="idle_time" placeholder="Idle Time" required>
+            <input type="number" step="any" name="idle_men" placeholder="Idle Men" required>
+            <input type="number" step="any" name="no_of_style_change" placeholder="No. of Style Change" required>
+            <input type="number" step="any" name="no_of_workers" placeholder="No. of Workers" required>
+
+            <!-- Dummy Encoded Inputs -->
+            <select name="quarter_Q2">
+                <option value="0">Q1</option>
+                <option value="1">Q2</option>
+            </select>
+            <select name="department_sweing">
+                <option value="0">Finishing</option>
+                <option value="1">Sewing</option>
+            </select>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction_text %}
+            <div class="prediction">{{ prediction_text }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>

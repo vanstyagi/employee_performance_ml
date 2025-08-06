@@ -27,7 +27,7 @@ employee_performance_ml/
 ├── model_building.py    # Model training + saving
 ├── test_predict.py      # Manual testing script
 ├── requirements.txt     # Dependency list
-└── README.md            # You're here 😎
+└── README.md            # You're here 
 ```
 
 ---
@@ -126,5 +126,3 @@ python main.py
 - ⚙️ Hands-on end-to-end deployment experience
 
 ---
-
-> 🚀 _“Turning raw employee data into actionable productivity insights — fully automated."_  
